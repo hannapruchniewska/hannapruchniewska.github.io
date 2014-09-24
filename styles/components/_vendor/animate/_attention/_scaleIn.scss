@@ -1,0 +1,35 @@
+// originally authored by Nick Pettit - https://github.com/nickpettit/glide
+
+@-webkit-keyframes scaleIn {
+  0% {-webkit-transform: scale(1);}
+  100% {-webkit-transform: scale(1.1);}
+}
+
+@-moz-keyframes scaleIn {
+  0% {-moz-transform: scale(1);}
+  100% {-moz-transform: scale(1.1);}
+}
+
+@-ms-keyframes scaleIn {
+  0% {-ms-transform: scale(1);}
+  100% {-ms-transform: scale(1.1);}
+}
+
+@-o-keyframes scaleIn {
+  0% {-o-transform: scale(1);}
+  100% {-o-transform: scale(1.1);}
+}
+
+@keyframes scaleIn {
+  0% {transform: scale(1);}
+  100% {transform: scale(1.1);}
+}
+
+@mixin scaleIn($duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(scaleIn);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

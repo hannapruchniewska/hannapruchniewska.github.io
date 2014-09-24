@@ -1,0 +1,49 @@
+@-webkit-keyframes hoverSwing {
+	0%, 33%, 100% { -webkit-transform-origin: top center; }
+	0% { -webkit-transform: rotate(5deg); }
+	25% { -webkit-transform: rotate(-5deg); }
+	50% { -webkit-transform: rotate(5deg); }
+	75% { -webkit-transform: rotate(-5deg); }
+}
+
+@-moz-keyframes hoverSwing {
+	0%, 33%, 100% { -moz-transform-origin: top center; }
+	0% { -moz-transform: rotate(5deg); }
+	25% { -moz-transform: rotate(-5deg); }
+	50% { -moz-transform: rotate(5deg); }
+	75% { -moz-transform: rotate(-5deg); }
+}
+
+@-ms-keyframes hoverSwing {
+	0%, 33%, 100% { -ms-transform-origin: top center; }
+	0% { -ms-transform: rotate(5deg); }
+	25% { -ms-transform: rotate(-5deg); }
+	50% { -ms-transform: rotate(5deg); }
+	75% { -ms-transform: rotate(-5deg); }
+}
+
+@-o-keyframes hoverSwing {
+	0%, 33%, 100% { -o-transform-origin: top center; }
+	0% { -o-transform: rotate(5deg); }
+	25% { -o-transform: rotate(-5deg); }
+	50% { -o-transform: rotate(5deg); }
+	75% { -o-transform: rotate(-5deg); }
+}
+
+@keyframes hoverSwing {
+	0%, 33%, 100% { transform-origin: top center; }
+	0% { transform: rotate(5deg); }
+	25% { transform: rotate(-5deg); }
+	50% { transform: rotate(5deg); }
+	75% { transform: rotate(-5deg); }
+}
+
+@mixin hoverSwing($duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include transform-origin(top center);
+	@include animation-name(hoverSwing);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

@@ -1,0 +1,24 @@
+<div class="subpage">
+  <div class="content">
+    <p class="back toSlide" data-index="{{pageID}}" ng-click="switchPage(false)">&larr;</p><h2 class="section-content-title">{{ pages[pageID].title }}</h2>
+    <div class="clear"></div>
+    <div class="fullDescription">
+      <h3>{{ pages[pageID].subpage.subtitle }}</h3>
+      <div class="txt">
+        {{ pages[pageID].subpage.more }}
+      </div>
+    </div>
+    <div class="slider" id="slider">
+          <div class="als-item"><img src="images/common/img.jpg" alt="apple" title="apple" /></div>
+          <div class="als-item"><img src="images/common/img.jpg" alt="banana" title="banana" /></div>
+          <div class="als-item"><img src="images/common/img.jpg" alt="apple" title="apple" /></div> <!-- image -->
+          <div class="als-item"><img src="images/common/img.jpg" alt="banana" title="banana" /></div>
+          <div class="als-item"><img src="images/common/img.jpg" alt="apple" title="apple" /></div> <!-- image -->
+          <div class="als-item"><img src="images/common/img.jpg" alt="banana" title="banana" /></div>
+          <div class="als-item"><img src="images/common/img.jpg" alt="apple" title="apple" /></div> <!-- image -->
+          <div class="als-item"><img src="images/common/img.jpg" alt="banana" title="banana" /></div> 
+  </div>
+</div>
+
+<script type="text/javascript" src="scripts/vendor/jquery/jquery-1.11.1.min.js"></script>
+<script src="scripts/vendor/owl-carousel/owl.carousel.js"></script>

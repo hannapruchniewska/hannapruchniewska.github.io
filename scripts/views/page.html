@@ -1,0 +1,18 @@
+<div class="content">
+  <h2 class="section-title">{{ pages[pageID].title }}</h2>
+  <div class="images" ng-repeat="(key, image) in pages[pageID].images">
+    <div ng-if="key == 0" class="image image-large" style="{{image.position}}"><img src="{{image.url}}" alt=""></div>
+    <div ng-if="key == 1" class="image image-medium" style="{{image.position}}"><img src="{{image.url}}" alt=""></div>
+    <div ng-if="key == 2" class="image image-small" style="{{image.position}}"><img src="{{image.url}}" alt=""></div>
+  </div>
+  <div class="description">
+  	<div class="inner">
+  		<div class="text" ng-bind-html="pages[pageID].description">
+    		{{ pages[pageID].description }} 
+    	</div>
+    	<div class="next">
+    		<span ng-if="pages[pageID].subpage" class="more toSlide" data-index="{{ pageID }}" ng-click="switchPage(true)">czytaj więcej</span>
+    	</div>
+    </div>
+  </div>
+</div>

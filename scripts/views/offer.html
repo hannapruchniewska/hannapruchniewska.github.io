@@ -1,0 +1,10 @@
+<section class="section" id="section{{pageID}}">
+  <div ng-switch on="pageData">
+    <div ng-switch-when="false" class="slide">
+      <div ng-include src=" ' scripts/views/page.html ' " />
+    </div>
+    <div ng-switch-when="true" class="slideRight">
+      <div ng-include src="' scripts/views/subpage.html '" onload='slider()' />
+    </div>
+  </div>
+</section>

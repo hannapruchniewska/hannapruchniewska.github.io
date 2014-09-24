@@ -1,0 +1,107 @@
+%header
+  display: block
+  .wrapper
+    +wrapper($siteWidth)
+    position: relative
+    
+      
+.site-header
+  @extend %header
+  position: relative
+  padding-bottom: 60px
+  border-bottom: 5px #000414 solid
+  padding-top: 120px
+  background: url(../../images/bg/header2.jpg) center center no-repeat
+  // background-size: cover
+  background-position: fixed
+  +fadeIn(1500ms)
+  +clearfix
+  &::before
+    // background-color: rgba(30, 100, 255, 0.2)
+    content: ""
+    position: absolute
+    top: 0
+    width: 100%
+    height: 100%
+    display: block
+    // +light(2500ms)
+    // animation-iteration-count: infinite
+    // -webkit-animation-iteration-count: infinite
+
+  .site-header__content
+    font-size: 0
+    .header-title, .header-avatar
+      display: inline-block
+      margin: 0 2%
+
+  .header-title
+    width: 70%
+    margin-bottom: 20px
+    text-shadow: 0px 0px 5px #000
+    color: #fff
+    h1, h2
+      padding-top: 0
+      padding-bottom: 10px
+    h1
+      +slideInLeft(500ms, 900ms)
+    h2
+      padding-left: 20%
+      +slideInLeft(500ms, 1100ms)
+  
+
+.menu--top
+  margin-bottom: 20px
+  padding: 0
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  background: #000
+  background: rgba(0, 4, 20, 0.9)
+  border-bottom: 1px #213650 solid
+  text-align: right
+  box-shadow: 0px 0px 20px -2px #000
+  +slideInDown(1000ms, 200ms)
+  z-index: 999
+  .wrapper
+    +wrapper($siteWidth)
+  ul
+    display: inline-block
+    margin: 0
+    padding: 0
+    list-style-type: none
+    font-size: 0
+    li
+      display: inline-block
+      font-size: 14px
+      color: #fff
+      @for $i from 1 through 10
+        &.element-#{$i}
+          +bounceIn(300ms, 1200ms + $i * 100)
+      &::before
+        content: ""
+      a 
+        position: relative
+        padding: 3px 5px
+        font-size: 12px
+        font-weight: 300
+        // font-family: "LatoLatinLight"
+        color: #fff
+        text-decoration: none
+        text-transform: uppercase
+        &::after
+          width: 0
+          transition: width 200ms linear
+        &:hover, &.active
+          color: #eee
+          &::after
+            content: ""
+            display: block
+            position: absolute
+            width: 50%
+            left: 0
+            right: 0
+            bottom: 0
+            margin: auto
+            border-bottom: 1px #aaa solid
+            transition: all 200ms linear

@@ -1,0 +1,104 @@
+.team
+  display: block
+  position: relative
+  .team__persons
+    display: block
+    margin: -2%
+    +clearfix
+  .person
+    display: table
+    width: 46%
+    height: 250px
+    margin: 2%
+    float: left
+    border: 4px #000414 solid
+    border-collapse: collapse
+    +flipInX(500ms, 1300ms)
+    +clearfix
+    &__image
+      width: 50%
+      height: 100%
+      display: table-cell
+      position: relative
+      overflow: hidden
+      img
+        position: absolute
+        min-width: 100%
+        min-height: 100%
+        max-width: none
+        left: -50%
+        right: -50%
+        top: -1%
+        bottom: -1%
+        margin: auto
+        backface-visibility: hidden
+        -webkit-backface-visibility: hidden
+        +transform(translateZ(0))
+        +transition(all 150ms linear)
+    &__text
+      width: 50%
+      height: 100%
+      display: table-cell
+      position: relative
+      padding: 20px
+      padding-bottom: 60px
+      +transition(all 150ms linear)
+      *
+        font-family: "Roboto Condensed", Helvetica, sans-serif
+      &::before
+        content: ""
+        position: absolute
+        display: inline-block
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 0
+        height: 0
+        border-top: 20px solid transparent
+        border-bottom: 20px solid transparent
+        z-index: 1
+        left: -20px
+        border-right: 20px solid #fff
+        +transition(all 150ms linear)
+      .person__name 
+        a, p
+          font-size: 18px
+          font-weight: 700
+          text-decoration: none
+          color: inherit
+          padding-bottom: 5px
+        
+      .person__description 
+        *
+          font-family: "Open Sans", sans-serif
+          font-size: 13px
+          font-weight: 400
+          line-height: 1.3em
+      .person__contact
+        position: absolute
+        padding-top: 10px
+        border-top: 1px #ccc solid
+        bottom: 20px
+        left: 20px
+        right: 20px
+        *
+          font-family: "Open Sans", sans-serif
+          font-size: 14px
+          font-weight: 600
+          padding: 0
+          padding-top: 5px
+          display: block
+          text-align: center
+          line-height: 1.2
+          text-decoration: none
+
+  .person:hover
+    .person__image img
+      +transform(scale(1.1, 1.1))
+    .person__text
+      background: #000414
+      color: #fff
+      &::before
+        border-right-color: #000414
+      a
+        color: #ddd

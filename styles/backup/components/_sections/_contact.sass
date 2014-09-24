@@ -1,0 +1,125 @@
+.contact
+  display: block
+  position: relative
+  min-height: 300px
+  background: url(../../images/bg/contact.jpg) center center no-repeat
+  color: #fff
+  overflow: hidden
+  &--site
+    background: #fff
+    box-shadow: 0px 0px 20px -5px #000
+    color: #000414
+    .overlay
+      background: transparent !important
+      .section-title h2::after
+        background: #000414 !important
+      .icons .icon i.fa
+        border-color: #000414 !important
+      input, textarea
+        border: 1px #000414 solid !important
+      input[type="submit"]
+        border: none !important
+
+  .overlay
+    z-index: 1
+    background: rgba(0, 0, 0, 0.65)
+  video#bgvid
+    position: absolute
+    right: 0
+    bottom: 0
+    left: 0
+    top: 0
+    min-width: 100%
+    min-height: 100%
+    width: auto
+    height: auto
+    z-index: -100
+    background: url(../../images/bg/contact.jpg) no-repeat
+    background-size: cover
+
+  .wrapper
+    +wrapper($siteWidth)
+    padding: 40px 5% !important
+    .section-title
+      display: block
+      text-align: center
+      padding-top: 0
+      padding-bottom: 20px
+      h2
+        display: inline-block
+        padding: 0
+        &::after
+          content: ""
+          display: block
+          margin: 10px auto
+          width: 65%
+          height: 1px
+          background: #fff
+          background: rgba(255, 255, 255, 0.6)
+    .icons
+      font-size: 0
+      margin: 0 -1%
+      margin-bottom: 30px
+      .icon
+        display: inline-block
+        width: 48%
+        margin: 0 1%
+        font-size: 22px
+        font-family: "LatoLatinLight"
+        text-align: center
+        i.fa, span
+          display: inline-block
+          vertical-align: middle
+          margin: 0 1%
+        i.fa
+          padding: 15px
+          border: 1px #fff solid
+          border-radius: 50%
+          width: 60px
+          height: 60px
+          font-size: 30px
+
+    .contact__inputs
+      width: 33%
+      float: left
+      margin-right: 2%
+    .contact__text
+      width: 65%
+      float: left
+
+    form
+      font-size: 14px
+      color: #000
+      width: 85%
+      margin: 0 auto
+      +clearfix
+      fieldset
+        display: block
+        position: relative
+        input, select, textarea
+          width: 100%
+          margin-bottom: 20px
+          padding: 15px 20px
+          border: none
+          border-radius: 5px
+          resize: none
+        textarea
+          height: 112px
+
+        input[type="submit"]
+          width: 31%
+          background: $colorBlue
+          float: right
+          color: #fff
+          text-transform: uppercase
+          font-size: 12px
+          +transition(color 200ms linear, background 200ms linear)
+          &:hover
+            background: #ccc
+            color: #111
+
+
+      .submit
+        display: block
+        width: 100%
+        clear: both

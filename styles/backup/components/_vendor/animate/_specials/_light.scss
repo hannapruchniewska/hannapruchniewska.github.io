@@ -1,0 +1,39 @@
+@-webkit-keyframes light{ 
+  0%{
+    background-color: rgba(0, 0, 0, 0.0);
+  }
+
+  50%{
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  100%{
+    background-color: rgba(0, 0, 0, 0.0);
+  }
+}
+
+
+@keyframes light{ 
+  0%{
+    background-color: rgba(0, 0, 0, 0.0);
+  }
+
+  50%{
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  100%{
+    background-color: rgba(0, 0, 0, 0.0);
+  }
+}
+
+
+
+@mixin light($duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(light);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

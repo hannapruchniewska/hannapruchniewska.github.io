@@ -1,0 +1,40 @@
+.overlay-banner
+  position: fixed
+  display: block
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: #000414
+  z-index: 99999999
+  text-align: center
+
+.overlay-banner .wrapper
+  display: flex
+  align-items: center
+  width: 50%
+  max-width: 800px
+  height: 100%
+  margin: 0 auto
+  position: relative
+
+.overlay-banner .wrapper .close
+  display: none
+  position: absolute
+  right: -20px
+  top: -20px
+  color: #fff
+  cursor: pointer
+
+.overlay-banner .wrapper .close i
+  padding: 15px
+  background: #000
+  border: 4px #fff solid
+  border-radius: 50%
+  box-shadow: 0px 0px 5px 0px #000
+
+.overlay-banner .wrapper .image
+  position: relative
+  // border: 10px #fff solid
+  &.closed
+    +fadeOut(500ms)

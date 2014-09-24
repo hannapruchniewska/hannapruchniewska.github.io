@@ -1,0 +1,40 @@
+$fg-column: 60px;             // Column Width
+$fg-gutter: 25px;             // Gutter Width
+$fg-max-columns: 12;          // Total Columns For Main Container
+
+
+footer.site-footer
+	background: #000414
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	border-top: 5px #ddd solid
+	.wrapper
+		+wrapper($siteWidth)
+		+clearfix
+		min-height: 70px
+	
+		
+	.copyright, .menu--bottom
+		width: 100%
+		display: block
+		text-align: center
+		color: #fff
+	.copyright p
+		padding: 0
+		font-size: 14px
+	.menu--bottom
+		ul 
+			padding: 0
+			li
+				display: inline-block
+				&::before
+					display: none
+				a
+					font-size: 12px
+					text-transform: uppercase
+					text-decoration: none
+					color: inherit
+					&:hover
+						color: $colorRed
